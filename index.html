@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시니어 배리어프리 대시보드 v8.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="safety-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h1 class="modal-title">🛑 운동 시작 전, 안전 확인!</h1>
+            <div class="modal-divider"></div>
+            <ul class="modal-list">
+                <li><strong>혈압이 높거나 (180 mmHg 이상) 맥박이 빠를 때</strong> 아침 운동은 쉽니다.</li>
+                <li><strong>공복 상태이거나, 인슐린/약 복용 직후</strong> 당뇨 어르신은 운동을 금지합니다.</li>
+                <li><strong>관절이 붓고 아프거나, 열이 날 때</strong> 무리하지 않고 휴식을 취합니다.</li>
+                <li><strong>시작은 천천히!</strong> 쉬운 단계부터 조금씩 강도를 높여 나갑니다.</li>
+            </ul>
+            <button id="modal-confirm-btn" class="modal-btn">⭕ 확인했습니다. 운동 시작하기</button>
+        </div>
+    </div>
+
+    <div class="app-container-horizontal">
+        
+        <div class="left-model-pane" id="left-model-pane">
+            <div class="loading-text">인체 모델 로드 중...</div>
+        </div>
+
+        <div class="right-info-pane">
+            
+            <div class="part-label-box" id="label-box">부위를 선택하세요...</div>
+            
+            <div class="content-display-board" id="display-board">
+                <h2 id="board-title">어르신 건강증진 운동 가이드</h2>
+                <div class="board-divider"></div>
+                
+                <div class="board-image-wrapper">
+                    <div class="animation-window" id="animation-window">
+                        <img id="board-img-1" class="fade-layer" src="" alt="재활 시각 자료 1">
+                        <img id="board-img-2" class="fade-layer" src="" alt="재활 시각 자료 2">
+                    </div>
+                </div>
+
+                <p id="board-guide">
+                    좌측 인체 모형에서 운동을 원하는 부위에 커서를 올리거나, 
+                    TV 리모컨 방향키로 이동해 보세요.
+                </p>
+            </div>
+
+            <div class="persistent-warning-banner">
+                <span class="warning-icon">💡</span>
+                <div class="warning-text">
+                    <strong>꼭 알아두기: </strong>
+                    <span>운동하는 동안 자연스럽게 계속 숨을 쉽니다.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="app-attribution-footer">
+        <span>출처: 보건복지부 · 한국건강증진개발원 공공저작물(공공누리 제4유형)</span>
+        <span>본 서비스의 음성은 네이버 클로바더빙(CLOVA Dubbing)을 활용하여 제작되었습니다.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
